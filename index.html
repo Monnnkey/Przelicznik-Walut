@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5e96a1a630.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="converter">
+        <div class="wrapper">
+            <div class="converter__box-title">
+                <h1 class="converter-title">Kalkulator walutowy</h1>
+            </div>
+            <div class="converter__box">
+                <div class="converter__box-inputs">
+                    <input type="number" name="amount" id="amount" placeholder="Wpisz Kwote" class="converter__box-input">
+                </div>
+                <div class="converter__box-text">
+                    <p><span class="converter__box-value-input">0 </span><span class="converter__box-currencyInput">EURO</span> = <span class="converter__box-value-output">0 </span><span class="converter__box-currencyOutput">PLN</span></p>
+                </div>
+                <div class="converter__box-inputs">
+                    <div class="converter__box-data">
+                        <button class="converter__box-data-choose converter__box-data-choose-left">euro</button>
+                        <div class="converter__box-choice converter__box-choice-left">
+                            <div class="converter__box-choice-search">
+                                <input type="text" placeholder="Szukaj" class="converter__box-choice-search-btn">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div class="converter__box-choice-currency"></div>
+                        </div>
+                    </div>
+                    <div class="converter__box-data">
+                        <button class="converter__box-data-choose converter__box-data-choose-right">PLN - Polska</button>
+                    
+                    </div>
+                </div>
+                <button class="converter__box-btn">Przelicz</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/fetchApi.js"></script>
+    <script src="./js/pageFeatures.js"></script>
+</body>
+
+</html>

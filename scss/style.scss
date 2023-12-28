@@ -1,0 +1,190 @@
+:root {
+	font-size: 62.5%;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.6rem;
+	height: 110vh;
+	font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1000px;
+}
+
+.converter {
+	width: 100%;
+	margin: 1em;
+    &-title{
+        font-size: 2.5rem;
+        font-weight: normal;
+        margin-bottom: 0.5em;
+    }
+    &__box{
+        background-color: #c5c5c5;
+        padding: 1em 2em;
+        border-radius: 7px;
+        text-align: center;
+        &-btn{
+            width: 100%;
+            border-radius: 7px;
+            padding: .5em;
+            font-size: 1.8rem;
+            border: none;
+            background-color: royalblue;
+            color: white;
+            cursor: pointer;
+        }
+        &-text{
+            font-size: 2.3rem;
+            margin: 1em 0;
+        }
+        &-inputs{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1em 0 1.5em;
+        }
+        &-input{
+            width: 100%;
+            padding: .5em;
+            font-size: 1.6rem;
+            border-radius: 7px;
+            border:none;
+        }
+        &-data{
+            &-choose{
+                background-color: #ffffff;
+                border:none;
+                padding: 1em;
+                width: 200px;
+                border-radius: 7px;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+            &-swaper{
+                background: none;
+                border: 1px solid royalblue;
+                padding: .5em 1.5em;
+                margin: .7em;
+                border-radius: 2em;
+                cursor: pointer;
+                i{
+                    pointer-events: none;
+                    font-size: 1.6rem;
+                    color: royalblue;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .converter {
+        &-title{
+            font-size: 3rem;
+            margin-bottom: 1em;
+        }
+        &__box{
+            position: relative;
+            &-btn{
+                width: 30%;
+                padding: .8em 1.8em;
+                margin-bottom: 1em;
+            }
+            &-text{
+                font-size: 3rem;
+            }
+            &-inputs{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            &-input{
+                width: 50%;
+                margin: 1em auto;
+                font-size: 1.8rem;
+                padding: .8em 1.6em;
+            }
+            &-data{
+                &-choose{
+                    width: 250px;
+                    font-size: 1.6rem;
+                }
+                &-swaper{
+                    padding: .8em 2em;
+                    i{
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+            &-choice{
+                position: absolute;
+                top: 70%;
+                background-color:#ffffff;
+                padding: 1em;
+                border-radius: 7px;
+                min-width: 250px;
+                box-shadow: 1px 1px 15px #0000004d;
+                opacity: 0;
+                transition: top .3s,opacity .3s;
+                &-clicked{
+                    opacity: 1;
+                    top: 75%;
+                }
+                &-left{
+                    left: 3em;
+                }
+                &-right{
+                    right: 3em;
+                }
+                &-search{
+                    position: relative;
+                    text-align: center;
+                    &-btn{
+                        width: 100%;
+                        padding: .5em;
+                        border: 1px solid #a2b8fc;
+                        border-radius: 7px;
+                        font-size: 1.6rem;
+                    }
+                    .fa-solid{
+                        position: absolute;
+                        top: 50%;
+                        right: .8em;
+                        transform: translateY(-50%);
+                        pointer-events: none;
+                    }
+                }
+                &-currency{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-top: 1.5em;
+                    max-height: 300px;
+                    overflow:auto;
+                    p{
+                        padding: .3em 0;
+                        cursor: pointer;
+                        transition: color .3s;
+                        &:hover{
+                            text-decoration:underline;
+                            color: royalblue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
